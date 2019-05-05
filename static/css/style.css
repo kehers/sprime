@@ -1,0 +1,112 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: #222;
+  background-color: #fff;
+  transition: background-color 0.5s ease;
+}
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: #359844;
+  text-decoration: none
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  background-color: #ea2a5d;
+  color: #fff;
+}
+.status {
+  background-color: #587eff;
+  color: #fff;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+svg:not(.fr) {
+  width:16px;
+  position: relative;
+  top: 7px;
+  color: #aaa;
+}
+svg.fr {
+  color:#f8333e
+}
+div svg.fr {
+  display: none
+}
+input[type=checkbox]:checked ~ div {
+  transition: background-color 0.5s ease;
+  background-color: #f5f5f5
+}
+input[type=checkbox]:checked ~ div svg.fr {
+  display: block;
+  transition: display 0.5s ease;
+}
+
+label {
+  cursor: pointer;
+  user-select: none;
+}
+
+header.fixed {
+  background-color: #fff;
+  z-index: 2;
+  border-bottom: 1px solid #eee
+}
+
+.button,
+button {
+  display: inline-block;
+  padding: 0 30px;
+  height: 38px;
+  color: #fff;
+  text-align: center;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #359844;
+  border: 1px solid #359844;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+a.button:hover,
+button:hover {
+  transition: background-color 0.5s ease;
+  background-color: #01aa7c;
+}
+button:disabled,
+button:disabled:hover
+ {
+  background-color: #ddd;
+  border: 1px solid #bbb;
+  cursor: default;
+}
+
+.modal {
+  z-index: 3;
+  background-color: rgba(0,0,0,0.5)
+}
+.modal-body {
+  background-color: #fff;
+}
+
+footer {
+  color: #667
+}

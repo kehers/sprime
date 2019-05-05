@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|PT+Sans:400,700" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link rel="stylesheet" href="/css/tachyons.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div>
+  <form method="post">
+
+  <div class="modal dn fixed w-100 h-100">
+    <div class="center w-40 w-60-m modal-body mv6 pa5 br2">
+      <p class="lh-copy f4 mt0">You have selected <span class="count">0</span> channels. Kindly confirm you want to archive the selected channels.</p>
+      <div class=""><button type="submit">Yes, archive channels</button> <a href="#" class="close gray link dim ml4">close</a></div>
+    </div>
+  </div>
+
+    <header class="fixed w-100">
+      <div class="center w-40-ns w-100 pv4 ph3">
+        <button class="fr" type="button">Archive Selected Channels</button>
+        <h3 class="mt2 mb0 f5 pv1">Click on channel to select</h3>
+      </div>
+    </header>
+
+    <div class="pt6">
+      {% for channel in channels %}
+      <label class="dt w-100 pa0 ma0">
+        <input type="checkbox" name="channels[]" value="{{ channel.id }}">
+        <div class="dtc v-mid">
+          <div class=" bb b--black-05 center w-40-ns w-100 pa3">
+            <i data-feather="check-square" class="mt3 fr"></i>
+            <h4 class="f5 black-80 mv1">{{ channel.name }}</h4>
+            <p class="f6 black-60 mv0"><span class="w-30 dib"><i data-feather="calendar"></i> {{ channel.created }}</span> <i data-feather="user"></i> {{ channel.num_members }}</p>
+          </div>
+        </div>
+      </label>
+      {% endfor %}
+    </div>
+
+  </form>
+</div>
+
+<script>
+feather.replace();
+function confirmChannels() {
+  document.querySelector('.count').innerHTML  = document.querySelectorAll('input[type="checkbox"]:checked').length;
+  var modal = document.querySelector('.modal');
+  modal.classList.remove('dn');
+  modal.classList.add('db');
+}
+function closeModal() {
+  var modal = document.querySelector('.modal');
+  modal.classList.remove('db');
+  modal.classList.add('dn');
+}
+document.querySelector('button.fr').addEventListener("click", confirmChannels, false);
+document.querySelector('.close').addEventListener("click", closeModal, false);
+</script>
+
+<footer class="w-100 mt5 mb3 f6">
+  <div class="center w-40-ns w-100 pa3">
+    powered <a href="https://sharedbox.app/?ref=sprime" target="_blank">SharedBox</a>
+  </div>
+</footer>

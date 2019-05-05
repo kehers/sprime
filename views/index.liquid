@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Sprime</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Sprime" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Tools for Slack" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|PT+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/tachyons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  {% if error %}<div class="error pa3 tc">{{ error }}</div>{% endif %}
+  {% if info %}<div class="status pa3 tc">{{ info }}</div>{% endif %}
+
+  <div class="center w-40-ns w-80 w-60-m pv5">
+
+    <div class="tc">
+      <h1 class="lh-title f3 mt5"><a href="/">sprime</a></h1>
+
+      <h2 class="lh-copy normal f4">A simple way to archive multiple Slack channels.</h2>
+
+      <a href="/auth" class="button">Get started</a>
+
+      <div class="mv5">
+        <img src="/images/hero.png">
+      </div>
+    </div>
+
+    <h3 class="lh-title f3 mt5">FAQ</h3>
+
+    <p class="lh-copy">
+      <strong>Is this safe?</strong>
+      We only request Slack permission that will let us list and archive your channels. This is a one time operation so we don't also store the "access" to your account.<br>
+      We are not responsible for channels you archive though. Confirm again before you click the archive button. You know how the saying about responsibility and great power goes.
+    </p>
+    <p class="lh-copy">
+      <strong>Who is behind this?</strong>
+      The same team behind <a href="https://sharedbox.app/?ref=sprime" target="_blank">SharedBox</a>.
+    </p>
+    <p class="lh-copy">
+      <strong>How do I get in touch?</strong>
+      Send a mail to support@in.sharedbox.app
+    </p>
+  </div>
+
+</body>
+</html>
