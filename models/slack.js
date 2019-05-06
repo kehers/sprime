@@ -41,7 +41,7 @@ exports.getChannels = async (token) => {
 exports.archiveChannels = async (token, channels) => {
   try {
     const promises = [];
-    for (channel of channels) {
+    for (const channel of channels) {
       promises.push(got('https://slack.com/api/conversations.archive', {
         query: {
           token: token,
