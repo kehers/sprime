@@ -16,6 +16,13 @@ a:hover {
   text-decoration: underline;
 }
 
+.fade, .fade a {
+  color: #888;
+}
+.fade a {
+  text-decoration: underline;
+}
+
 .error {
   background-color: #ea2a5d;
   color: #fff;

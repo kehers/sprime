@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Sprime" />
   <meta property="og:type" content="website" />
-  <meta property="og:description" content="Tools for Slack" />
+  <meta property="og:description" content="Multi-channel archive for Slack" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|PT+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
   <link rel="stylesheet" href="css/style.css">
@@ -21,7 +21,7 @@
   <div class="center w-40-ns w-80 w-60-m pv5">
 
     <div class="tc">
-      <h1 class="lh-title f3 mt5"><a href="/">sprime</a></h1>
+      <h1 class="lh-title f3 mt5 dib"><a href="/">sprime</a></h1> <small class="fade">by <a href="https://sharedbox.app/?ref=sprime" target="_blank">SharedBox</a></small>
 
       <h2 class="lh-copy normal f4">A simple way to archive multiple Slack channels.</h2>
 
@@ -34,6 +34,10 @@
 
     <h3 class="lh-title f3 mt5">FAQ</h3>
 
+    <p class="lh-copy">
+      <strong>What's this?</strong>
+      Sprime provides an easy way to archive multiple Slack channels at once. We created it to clean up automatically created Slack channels from services like Drift.
+    </p>
     <p class="lh-copy">
       <strong>Is this safe?</strong>
       We only request Slack permission that will let us list and archive your channels. This is a one time operation so we don't also store the "access" to your account.<br>
@@ -48,6 +52,16 @@
       Send a mail to support@in.sharedbox.app
     </p>
   </div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134610941-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134610941-2');
+</script>
 
 </body>
 </html>
